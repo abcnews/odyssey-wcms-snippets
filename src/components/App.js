@@ -76,9 +76,9 @@ function contentToEditor(content) {
       case '#':
         return (<p title="Tag">{`#${line[1]}`}</p>);
       case '>':
-        return (<blockquote title="Blockquote"><p>{line[1]}</p>{line[2] ? <footer>{line[2]}</footer> : null}</blockquote>);
+        return (<p title="Blockquote" className={styles.blockQuote}><p>{line[1]}</p>{line[2] ? <footer>{line[2]}</footer> : null}</p>);
       case '"':
-        return (<blockquote title="Pull-quote" className={styles.pullQuote}><p>{line[1]}</p>{line[2] ? <footer>{line[2]}</footer> : null}</blockquote>);
+        return (<p title="Pull-quote" className={styles.pullQuote}><p>{line[1]}</p>{line[2] ? <footer>{line[2]}</footer> : null}</p>);
       case '@':
         return (<a title="Internal Link" href={line[2]} target="_blank">{line[1]}</a>);
       default:

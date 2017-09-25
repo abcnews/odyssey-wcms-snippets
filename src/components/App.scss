@@ -63,60 +63,65 @@
     line-height: 1.3;
   }
 
-  > .h2,
-  > .h3,
-  > .h4 {
-    font-weight: bold;
-  }
-
-  > .h2 {
-    font-size: 2em;
-  }
-
-  > .h3 {
-    font-size: 1.5em;
-  }
-
-  > blockquote {
-    margin: .25rem 0 .25rem 2rem;
-    border-left: 2px solid darkgrey;
-    padding: 2px 6px;
-    background-color: lightgrey;
-
-    &.pullQuote {
-      position: relative;
-      padding-left: 2rem;
-
-      &::before {
-        content: "“";
-        position: absolute;
-        top: 0;
-        left: .25rem;
-        width: 2rem;
-        height: 2rem;
-        color: grey;
-        font-family: Impact, serif;
-        font-size: 4rem;
-        line-height: 1;
-        font-smooth: all;
-        -webkit-font-smoothing: antialiased;
-      }
-    }
-
-    > * {
-      margin: 0;
-    }
-
-    > footer {
-      font-weight: bold;
-    }
-  }
-
   a {
     color: blue;
     text-decoration: underline;
   }
+}
 
+.ul,
+.ol {
+  margin-left: 2rem;
+}
+
+.h2,
+.h3,
+.h4 {
+  font-weight: bold;
+}
+
+.h2 {
+  font-size: 2em;
+}
+
+.h3 {
+  font-size: 1.5em;
+}
+
+.blockQuote {
+  margin: .25rem 0 .25rem 2rem;
+  border-left: 2px solid darkgrey;
+  padding: 2px 6px;
+  background-color: lightgrey;
+
+  > * {
+    margin: 0;
+  }
+
+  > footer {
+    font-weight: bold;
+  }
+}
+
+.pullQuote {
+  composes: blockQuote;
+  position: relative;
+  padding-left: 2rem;
+
+  &::before {
+    content: "“";
+    position: absolute;
+    top: 0;
+    left: .25rem;
+    width: 2rem;
+    height: 2rem;
+    color: grey;
+    font-family: Impact, serif;
+    font-size: 4rem;
+    line-height: 1;
+    font-smooth: all;
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 .rendered {
