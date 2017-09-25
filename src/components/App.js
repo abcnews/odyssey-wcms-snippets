@@ -132,7 +132,6 @@ function contentToMarkup(content) {
 }
 
 function frameSrc(html, hasHeader, hasNav, title) {
-  console.log(html);
   const doc = encodeURI(`
 <!doctype html>
 <html land="en-AU">
