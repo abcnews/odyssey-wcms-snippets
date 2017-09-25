@@ -1,6 +1,6 @@
 # odyssey-wcms-snippets
 
-A project generated from [aunty](https://github.com/abcnews/aunty)'s `preact-app` template.
+Show (mocked) side-by-side comparisons of WCMS editor content and resulting Odyssey story components.
 
 ## Authors
 

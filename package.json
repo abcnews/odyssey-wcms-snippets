@@ -1,7 +1,7 @@
 {
   "name": "odyssey-wcms-snippets",
   "version": "1.0.0",
-  "description": "A project generated from aunty's preact-app template.",
+  "description": "Show (mocked) side-by-side comparisons of WCMS editor content and resulting Odyssey story components.",
   "license": "MIT",
   "private": true,
   "contributors": [
