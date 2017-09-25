@@ -1,4 +1,84 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<div data-odyssey-wcms-snippets-root></div>
-<script src="index.js"></script>
+<!doctype html>
+<html land="en-AU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body { margin: 0; }
+    </style>
+  </head>
+  <body class="platform-mobile">
+    <header>
+      <nav id="abcHeader" class="global"></nav>
+    </header>
+    <div class="content">
+      <article>
+        <header>
+          <h1>Odyssey WCMS Snippets</h1>
+          <span class="attribution richtext">By <a href="#" target="_self" title="">Colin Gourlay</a></span>
+        </header>
+        <div class="story richtext">
+          <h2>Normal header</h2>
+          <div class="embed-fragment">
+            <div data-odyssey-wcms-snippets-root>
+              <noscript header nav title="Normal header">
+                ['#', 'header'],
+                ['p', 'Subtitle'],
+                ['#', 'endheader'],
+                [],
+                ['p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque molestie faucibus lobortis. Nullam rhoncus orci a metus lacinia dictum. Praesent lacinia in erat at eleifend.']
+              </noscript>
+            </div>
+          </div>
+          <h2>Dark header with an image</h2>
+           <div class="embed-fragment">
+            <div data-odyssey-wcms-snippets-root>
+              <noscript header nav title="Dark header with an image">
+                ['#', 'headerdark'],
+                ['@', 'image', 'http://www.abc.net.au/news/image/8974260-3x2-460x307.jpg', 'Tony Abbott said his minor injuries included a slightly swollen lip.', 'ABC News: Selina Ross'],
+                ['p', 'Subtitle'],
+                ['#', 'endheader'],
+                [],
+                ['p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque molestie faucibus lobortis. Nullam rhoncus orci a metus lacinia dictum. Praesent lacinia in erat at eleifend.']
+              </noscript>
+            </div>
+          </div>
+          <h2>Everything else</h2>
+          <div class="embed-fragment">
+            <div data-odyssey-wcms-snippets-root>
+              <noscript>
+                ['h2', 'Level 1 heading'],
+                ['#', 'pullright'],
+                ['@', 'image', 'http://www.abc.net.au/news/image/8974260-3x2-460x307.jpg', 'Tony Abbott said his minor injuries included a slightly swollen lip.', 'ABC News: Selina Ross'],
+                ['#', 'endpull'],
+                ['p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque molestie faucibus lobortis. Nullam rhoncus orci a metus lacinia dictum. Praesent lacinia in erat at eleifend.'],
+                ['p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque molestie faucibus lobortis. Nullam rhoncus orci a metus lacinia dictum. Praesent lacinia in erat at eleifend.'],
+                ['h3', 'Level 2 heading'],
+                ['>', '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque molestie faucibus lobortis. Nullam rhoncus orci a metus lacinia dictum. Praesent lacinia in erat at eleifend."', 'Colin Gourlay'],
+                ['"', '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque molestie faucibus lobortis."', 'Colin Gourlay'],
+                ['p', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque molestie faucibus lobortis. Nullam rhoncus orci a metus lacinia dictum. Praesent lacinia in erat at eleifend.'],
+                ['#', 'hr']
+              </noscript>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <script>
+      (function (w, d, t, a) {
+        w.onload = function () {
+          var ls = d.getElementsByTagName(t)[0];
+          a.forEach(function (src) {
+            var s = document.createElement(t);
+            s.async = true;
+            s.src = src;
+            ls.parentNode.insertBefore(s, ls);
+          });
+        };
+      }(window, document, 'script', [
+        'http://www.abc.net.au/res/sites/news-projects/odyssey/2.7.0/index.js',
+        'index.js'
+      ]));
+    </script>
+  </body>
+</html>

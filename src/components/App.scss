@@ -1,29 +1,124 @@
+:global body {
+  background-color: #fff;
+}
+
 .root {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;  
-  width: 100%;
-  height: 100%;
-  min-height: 320px;
-  background-color: #ffc100;
-  color: #fff;
-  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
 
-  h1 {
-    margin-bottom: 0;
-    font-family: -apple-system,
-      BlinkMacSystemFont, "Segoe UI",
-      Roboto, Helvetica, Arial,
-      sans-serif !important;
-    font-size: 24px !important;
-    font-weight: normal !important;
-    line-height: normal !important;
-    letter-spacing: normal !important;
+  @media (min-width: 43.75rem) {
+    flex-direction: row;
   }
 }
 
-.worm {
-  width: 240px;
-  height: auto;
+.root > * {
+  align-items: flex-start;
+  margin: 1rem;
+}
+
+.editor {
+  display: flex;
+  position: relative;
+  margin-bottom: 2rem;
+  font: menu;
+  font-size: .825rem;
+  line-height: 1.2;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+
+  @media (min-width: 43.75rem) {
+    width: 20rem;
+  }
+
+  &::after {
+    content: "⬇️";
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: calc(50% - .5rem);
+
+    @media (min-width: 43.75rem) {
+      content: none;
+    }
+  }
+}
+
+.editorLabel {
+  margin-right: .5rem;
+  padding-left: 1.25rem;
+  background-image: url(./text-label.png);
+  background-repeat: no-repeat;
+}
+
+.editorBox {
+  flex-grow: 1;
+  border: 2px inset lightgrey;
+  padding: 2px 2px 1rem;
+  background-color: white;
+  letter-spacing: .05em;
+
+  > * {
+    margin: 0 0 .125rem;
+    line-height: 1.3;
+  }
+
+  > .h2,
+  > .h3,
+  > .h4 {
+    font-weight: bold;
+  }
+
+  > .h2 {
+    font-size: 2em;
+  }
+
+  > .h3 {
+    font-size: 1.5em;
+  }
+
+  > blockquote {
+    margin: .25rem 0 .25rem 2rem;
+    border-left: 2px solid darkgrey;
+    padding: 2px 6px;
+    background-color: lightgrey;
+
+    &.pullQuote {
+      position: relative;
+      padding-left: 2rem;
+
+      &::before {
+        content: "“";
+        position: absolute;
+        top: 0;
+        left: .25rem;
+        width: 2rem;
+        height: 2rem;
+        color: grey;
+        font-family: Impact, serif;
+        font-size: 4rem;
+        line-height: 1;
+        font-smooth: all;
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+
+    > * {
+      margin: 0;
+    }
+
+    > footer {
+      font-weight: bold;
+    }
+  }
+
+}
+
+.rendered {
+  flex-grow: 1;
+
+  iframe {
+    width: 100%;
+    box-shadow: 0 .25rem 1rem rgba(0, 0, 0, .2);
+  }
 }
